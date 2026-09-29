@@ -1,0 +1,50 @@
+body:has(.image-preview[open]) { overflow: hidden; }
+.image-preview {
+  position: fixed; inset: 0; width: 100vw; height: 100dvh;
+  max-width: none; max-height: none; margin: 0; padding: 15px 24px 13px;
+  border: 0; border-radius: 0; overflow: hidden; overscroll-behavior: contain;
+  background: #30362df7; color: #fbf5e5; box-shadow: none;
+  font-family: var(--font-hand, 'PingFang SC', sans-serif);
+}
+.image-preview[open] { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 12px; }
+.image-preview::backdrop { background: #30362d; backdrop-filter: blur(8px); }
+.image-preview *, .image-preview *::before, .image-preview *::after { box-sizing: border-box; }
+.image-preview__header { display: flex; align-items: center; gap: 20px; width: 100%; max-width: 1400px; margin: 0 auto; }
+.image-preview__title { margin: 0; flex: 1; min-width: 0; font: 400 18px/1.5 var(--font-hand, sans-serif); color: #f3ecd9; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.image-preview__close { display: grid; place-items: center; flex: none; width: 44px; height: 44px; padding: 0; border: 1px solid #f4e8c859; border-radius: 50%; color: #fff6dc; background: #ffffff0d; cursor: pointer; font: 30px/1 sans-serif; touch-action: manipulation; }
+.image-preview__close:focus-visible { outline: 3px solid #f2d592; outline-offset: 3px; }
+.image-preview__surface { position: relative; display: grid; place-items: center; min-width: 0; min-height: 0; overflow: hidden; cursor: zoom-out; container-type: size; }
+.image-preview .image-preview__surface > .image-preview__image {
+  display: block; width: 100%; height: 100%; min-width: 0; min-height: 0;
+  max-width: 100%; max-height: 100%; aspect-ratio: auto; object-fit: contain; object-position: center;
+  padding: 0; margin: 0; border: 0; border-radius: 0; background: none;
+  box-shadow: none; transform: none; filter: none; user-select: none;
+}
+.image-preview .image-preview__gallery {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0;
+  align-self: center; align-items: end; width: min(100%, calc((100dvh - 140px) * 1.2)); height: auto;
+  max-width: 100%; max-height: 100%; aspect-ratio: 1.2; border: 0; border-radius: 12px;
+  padding: 0; margin: 0; transform: none; box-shadow: none; overflow: hidden;
+}
+@supports (width: 1cqw) {
+  .image-preview .image-preview__gallery { width: min(100cqw, 120cqh); height: min(100cqh, 83.333cqw); }
+}
+.image-preview .image-preview__gallery > .game-scenery { width: 100%; height: 88%; top: 0; left: 0; }
+.image-preview .image-preview__gallery figure { display: grid; grid-template-rows: minmax(0, 1fr) auto; align-items: end; justify-content: stretch; height: 100%; min-height: 0; margin: 0; padding: 25% 3% 0; }
+.image-preview .image-preview__gallery figure::before { bottom: 70px; }
+.image-preview .image-preview__gallery img { display: block; width: 100%; height: 100%; min-width: 0; min-height: 0; max-width: 100%; max-height: none; margin: 0; padding: 0; aspect-ratio: auto; object-fit: contain!important; object-position: center bottom; border: 0!important; border-radius: 0; transform: none!important; box-shadow: none; background: none; }
+.image-preview .image-preview__gallery figcaption { height: auto; min-height: 61px; padding: 9px 3px; gap: 4px; }
+.image-preview .image-preview__gallery b { font-size: clamp(17px, 2.4vw, 28px); }
+.image-preview .image-preview__gallery figcaption span { font-size: clamp(11px, 1.3vw, 15px); padding: 3px 8px; }
+.image-preview__hint { margin: 0; text-align: center; color: #d3ceb9; font-size: 13px; line-height: 1.5; pointer-events: none; }
+@media (hover: hover) and (pointer: fine) { .image-preview__close:hover { background: #ffffff20; } }
+@media (max-width: 600px) {
+  .image-preview { padding: max(10px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom)); }
+  .image-preview[open] { gap: 9px; }
+  .image-preview__header { gap: 12px; }
+  .image-preview__title { font-size: 15px; }
+  .image-preview__hint { font-size: 12px; }
+  .image-preview .image-preview__gallery { border-radius: 7px; }
+  .image-preview .image-preview__gallery figcaption { min-height: 52px; padding: 6px 2px; }
+  .image-preview .image-preview__gallery figure::before { bottom: 52px; }
+}

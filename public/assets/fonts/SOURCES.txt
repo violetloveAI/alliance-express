@@ -1,0 +1,11 @@
+Journey Hand: subset of LXGW WenKai Regular v1.522
+Source: https://github.com/lxgw/LxgwWenKai/releases/tag/v1.522
+License: LXGW-LICENSE.txt (SIL Open Font License 1.1)
+
+Journey Display: subset of Smiley Sans Oblique v2.0.1
+Source: https://github.com/atelier-anchor/smiley-sans/releases/tag/v2.0.1
+License: SMILEY-LICENSE.txt (SIL Open Font License 1.1)
+
+Subsets include this game's interface and memory text. Modified family names
+are Journey Hand and Journey Display. Font files are served locally.
+Prepared on 2026-09-29 using fontTools subset, preserving license metadata.

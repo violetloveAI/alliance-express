@@ -1,0 +1,13 @@
+/* Visit state is independent of access: a gifted page can be opened remotely. */
+.memory-map-button[data-visited=false] text{fill:#9c4d27;font-weight:700;font-size:13px;letter-spacing:.2px}
+.memory-map-button[data-visited=false] rect{fill:#fff1d8;stroke:#c78952;stroke-width:1.8}
+.memory-map-button[data-visited=true] text{fill:#346242;font-weight:650;font-size:13px;letter-spacing:.2px}
+.memory-map-button[data-visited=true] rect{fill:#edf4d9;stroke:#8aa77b;stroke-width:1.6;stroke-dasharray:none}
+.memory-map-button[data-locked=true] rect{stroke-dasharray:5 3}
+.memory-map-button[data-visited=false]:hover rect{fill:#ffebc3;stroke:#b96f36}
+.memory-map-button[data-visited=true]:hover rect{fill:#e3efd1;stroke:#638751}
+.top-actions .tool-button{position:relative;overflow:visible}
+.top-actions .tool-button .unread-dot:not([hidden]){display:block;position:absolute;right:4px;top:3px;width:10px;height:10px;background:#d9675e;border:2px solid #fff8e9;border-radius:50%;box-shadow:0 1px 3px #a8514938;pointer-events:none;animation:book-dot-arrive .25s ease-out}
+.unread-dot[hidden]{display:none!important}
+@keyframes book-dot-arrive{from{transform:scale(.4)}to{transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.top-actions .tool-button .unread-dot{animation:none!important}}

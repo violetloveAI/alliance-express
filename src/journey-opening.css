@@ -1,0 +1,20 @@
+.journey-arrival {
+ position:absolute;z-index:5;left:50%;top:30%;
+ display:grid;gap:8px;width:max-content;max-width:calc(100% - 48px);
+ padding:20px 34px;text-align:center;
+ color:#6a7450;background:#fff9eaf5;
+ border:1px solid #d3bd90;border-radius:7px 22px 9px 20px;
+ box-shadow:0 7px 0 #c3aa7921,0 16px 48px #49543212;
+ font-family:var(--font-hand);pointer-events:none;opacity:0;
+ transform:translate(-50%,-50%);
+}
+.journey-arrival::before {content:'';position:absolute;left:calc(50% - 26px);top:-7px;width:52px;height:14px;background:#d9bd778a;transform:rotate(-5deg);}
+.journey-arrival span {font-size:12px;letter-spacing:.12em;color:#99805a;}
+.journey-arrival strong {font:clamp(23px,3vw,33px)/1.4 var(--font-display);font-weight:400;}
+.journey-arrival small {font-size:14px;color:#958264;}
+.journey-arriving .journey-arrival {animation:journey-welcome 900ms var(--ease-out,cubic-bezier(.23,1,.32,1)) both;}
+.journey-arriving .map-heading,.journey-arriving .travel-dock {animation:journey-interface 280ms var(--ease-out,cubic-bezier(.23,1,.32,1)) 80ms both;}
+@keyframes journey-welcome {0% {opacity:0;transform:translate(-50%,calc(-50% + 10px));}20%,76% {opacity:1;transform:translate(-50%,-50%);}100% {opacity:0;transform:translate(-50%,calc(-50% - 5px));}}
+@keyframes journey-interface {from {opacity:0;transform:translateY(6px);}to {opacity:1;transform:translateY(0);}}
+@media (max-width:600px) {.journey-arrival {top:35%;padding:16px 22px;gap:6px;}.journey-arrival small{font-size:12px;}}
+@media (prefers-reduced-motion:reduce) {.journey-arriving .journey-arrival {animation:journey-welcome-fade 180ms ease both;}.journey-arriving .map-heading,.journey-arriving .travel-dock{animation:none;}@keyframes journey-welcome-fade{from{opacity:0;}to{opacity:1;}}}

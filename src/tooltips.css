@@ -1,0 +1,64 @@
+.has-journey-tooltip {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.journey-tooltip {
+  position: fixed;
+  inset: auto;
+  z-index: 10000;
+  display: grid;
+  gap: 4px;
+  width: max-content;
+  max-width: min(242px, calc(100vw - 24px));
+  margin: 0;
+  padding: 12px 15px 13px;
+  border: 1px solid #d6bd93;
+  border-radius: 13px 16px 12px 15px;
+  color: #654c34;
+  background: #fff9eafc;
+  box-shadow: 0 3px 0 #c8a77c20, 0 9px 24px #644c3429;
+  font: 12px/1.6 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  text-align: left;
+  overflow: visible;
+  overflow-wrap: anywhere;
+  pointer-events: none;
+  animation: journey-tooltip-appear 140ms ease-out;
+}
+
+.journey-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 15px;
+  width: 27px;
+  height: 7px;
+  border-radius: 2px;
+  background: #ebd1a4c7;
+  transform: rotate(-4deg);
+}
+
+.journey-tooltip[hidden],
+.journey-tooltip__description[hidden] {
+  display: none;
+}
+
+.journey-tooltip__title {
+  font: 400 19px/1.3 var(--font-hand, 'PingFang SC', serif);
+  color: #705237;
+}
+
+.journey-tooltip__description {
+  display: block;
+  color: #887052;
+}
+
+@keyframes journey-tooltip-appear {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-tooltip { animation: none; }
+}

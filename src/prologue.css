@@ -1,0 +1,95 @@
+.prologue {
+ --prologue-ease:var(--ease-out,cubic-bezier(.23,1,.32,1));
+ width:min(1080px,calc(100vw - 48px));max-width:none;max-height:calc(100dvh - 32px);
+ margin:auto;padding:0;overflow:auto;overscroll-behavior:contain;
+ color:#675941;background:#fff8eb;border:1px solid #d9c39d;
+ border-radius:18px 25px 19px 26px;box-shadow:0 7px 0 #c4ad8033,0 28px 90px #3b3a3145;
+ font-family:var(--font-hand,'PingFang SC',serif);
+}
+.prologue::backdrop {background:#434b3dea;backdrop-filter:blur(8px);}
+.prologue *, .prologue *::before,.prologue *::after {box-sizing:border-box;}
+.prologue [hidden] {display:none!important;}
+.prologue h2,.prologue h3,.prologue p,.prologue figure {margin:0;}
+.prologue button {font:inherit;min-height:44px;min-width:44px;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;}
+.prologue button:focus-visible {outline:3px solid #899b61;outline-offset:4px;}
+.prologue button:disabled,.prologue button[aria-disabled="true"] {cursor:default;opacity:.32;}
+.prologue__book {padding:24px 30px 19px;background-image:radial-gradient(#b29b641c .6px,transparent .6px);background-size:5px 5px;}
+.prologue__header {position:relative;padding:0 125px 17px 3px;}
+.prologue__eyebrow {color:#9b845d;font:10px/1.5 system-ui,sans-serif;letter-spacing:.2em;}
+.prologue__title {margin-top:5px!important;color:#65794f;font:26px/1.4 var(--font-display,var(--font-hand));font-weight:400;}
+.prologue__skip {position:absolute;right:0;top:6px;padding:8px 14px;border:1px solid #ded0b7;background:#fffcf2;border-radius:20px;color:#8d7959;font-size:14px!important;}
+.prologue__stage {position:relative;}
+.prologue__slide {display:grid;grid-template-columns:minmax(0,1fr);gap:17px;}
+.prologue__art {position:relative;overflow:hidden;isolation:isolate;aspect-ratio:16/8.4;border:2px solid #7d8363;border-radius:5px 13px 6px 11px;background:#e7ead5;box-shadow:0 4px 0 #c2b18c22;}
+.prologue__image {display:block;width:100%;height:100%;object-fit:cover;object-position:center;}
+.prologue__art::after {content:'';pointer-events:none;position:absolute;inset:7px;border:1px solid #fff9e569;border-radius:2px 7px 3px 6px;}
+.prologue__dialogue {position:absolute;right:4%;top:6%;max-width:55%;padding:11px 17px;border:1.5px solid #817554;border-radius:19px 22px 17px 21px;background:#fffbeefa;box-shadow:2px 3px 0 #76634317;color:#655e45;font-size:clamp(15px,1.7vw,21px);line-height:1.5;transform:rotate(1deg);}
+.prologue__dialogue::after {content:'';position:absolute;left:21%;bottom:-8px;width:13px;height:13px;border-right:1.5px solid #817554;border-bottom:1.5px solid #817554;background:#fffbee;transform:skew(-20deg) rotate(45deg);}
+.prologue__image-fallback {position:absolute;inset:0;display:grid;place-items:center;padding:30px;text-align:center;background:linear-gradient(145deg,#e4e9d0,#f2e4c5);font-size:22px;color:#7b825c;}
+.prologue__copy {position:relative;padding:0 11px 0 101px;min-height:84px;}
+.prologue__chapter {position:absolute;left:4px;top:3px;display:grid;align-content:center;max-width:84px;min-height:62px;padding:8px;border:1px dashed #c6b68b;border-radius:5px;color:#9e8254;background:#f5ecd5;font-size:12px;line-height:1.7;text-align:center;transform:rotate(-3deg);}
+.prologue__heading {font:clamp(21px,2.1vw,27px)/1.4 var(--font-display,var(--font-hand));font-weight:400;color:#6b7e50;}
+.prologue__caption {margin-top:5px!important;max-width:770px;color:#8a7659;font-size:16px;line-height:1.8;white-space:pre-line;}
+.prologue__controls {display:flex;align-items:center;gap:13px;margin-top:16px;padding-top:16px;border-top:1px dashed #d8c9a9;}
+.prologue__previous,.prologue__pause {padding:8px 15px;border:1px solid #dfd3b8;border-radius:13px;background:#fffaf0;color:#8d7c5e;font-size:14px!important;}
+.prologue__pagination {display:flex;align-items:center;gap:2px;margin-right:auto;}
+.prologue__dot {position:relative;display:grid;place-items:center;padding:0;border:0;background:transparent;color:#a99b7c;font:12px ui-monospace,monospace!important;}
+.prologue__dot::before {content:'';position:absolute;width:29px;height:29px;border-radius:50%;border:1px solid #d8cbab;transition:background-color 160ms ease,border-color 160ms ease;}
+.prologue__dot[aria-current="true"],.prologue__dot[aria-current="step"] {color:#fcf8e8;}
+.prologue__dot[aria-current="true"]::before,.prologue__dot[aria-current="step"]::before {background:#839468;border-color:#839468;z-index:-1;}
+.prologue__dot {isolation:isolate;}
+.prologue__next {padding:10px 24px;border:1px solid #b5985c;border-radius:15px 19px 13px 18px;background:#efd290;box-shadow:0 3px 0 #c4a263;color:#705531;font-family:var(--font-display,var(--font-hand))!important;font-size:16px!important;transition:transform 120ms var(--prologue-ease);}
+.prologue__next:active {transform:translateY(2px);}
+.prologue__status {position:absolute!important;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;}
+@media (hover:hover) and (pointer:fine) {.prologue__next:hover{transform:translateY(-1px);}.prologue__skip:hover,.prologue__previous:not(:disabled):not([aria-disabled="true"]):hover,.prologue__pause:hover{background:#f1ead6;color:#67764f;}}
+@media (prefers-reduced-motion:no-preference) {
+ .prologue__slide:not([hidden]) .prologue__image {animation:prologue-image-in 700ms var(--prologue-ease) both;}
+ .prologue__slide:not([hidden]) .prologue__copy {animation:prologue-copy-in 280ms var(--prologue-ease) 50ms both;}
+ .prologue__slide:not([hidden]) .prologue__dialogue {animation:prologue-bubble-in 280ms var(--prologue-ease) 140ms both;}
+ @keyframes prologue-image-in {from{opacity:0;transform:scale(1.025);}to{opacity:1;transform:scale(1);}}
+ @keyframes prologue-copy-in {from{opacity:0;transform:translateY(5px);}to{opacity:1;transform:translateY(0);}}
+ @keyframes prologue-bubble-in {from{opacity:0;transform:translateY(7px) rotate(1deg);}to{opacity:1;transform:translateY(0) rotate(1deg);}}
+}
+@media (max-width:700px) {
+ .prologue {width:calc(100vw - 24px);max-height:calc(100dvh - 24px);border-radius:16px 21px 17px 22px;}
+ .prologue__book {padding:20px 18px 17px;}
+ .prologue__header {padding:0 82px 16px 0;}
+ .prologue__title {font-size:23px;}
+ .prologue__eyebrow {font-size:9px;letter-spacing:.12em;}
+ .prologue__skip {padding:6px 9px;font-size:12px!important;}
+ .prologue__art {aspect-ratio:16/10;}
+ .prologue__image {object-fit:contain;background:#f4ecd9;}
+ .prologue__dialogue {top:5%;right:4%;max-width:77%;padding:7px 10px;font-size:14px;}
+ .prologue__copy {padding:2px 0;min-height:146px;}
+ .prologue__chapter {position:static;display:inline-block;max-width:none;min-height:0;margin:0 0 9px!important;padding:2px 8px;border-radius:4px;font-size:10px;transform:rotate(-2deg);}
+ .prologue__heading {font-size:24px;line-height:1.5;}
+ .prologue__caption {margin-top:7px!important;font-size:15px;line-height:1.85;}
+ .prologue__controls {display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin-top:15px;padding-top:12px;}
+ .prologue__pagination {grid-column:1/-1;grid-row:1;justify-content:center;margin:0;}
+ .prologue__previous,.prologue__pause,.prologue__next {padding:8px 4px;min-width:0;font-size:13px!important;white-space:nowrap;}
+ .prologue__next {font-size:14px!important;}
+}
+/* Desktop pages use the width of the book for the story instead of stacking
+   a full-width image, caption and controls beyond the viewport's height. */
+@media (min-width:701px) {
+ .prologue__book {padding:18px 24px 16px;}
+ .prologue__header {padding-bottom:12px;}
+ .prologue__title {font-size:24px;line-height:1.3;}
+ .prologue__slide {gap:14px;}
+ .prologue__art {aspect-ratio:16/9;max-height:calc(100dvh - 275px);}
+ .prologue__image {object-fit:contain;background:#f4ecd9;}
+ .prologue__copy {min-height:0;}
+ .prologue__caption {font-size:15px;line-height:1.75;}
+ .prologue__controls {margin-top:12px;padding-top:10px;gap:10px;}
+ .prologue__next {padding:8px 21px;}
+}
+@media (min-width:901px) {
+ .prologue__slide {grid-template-columns:minmax(0,1.85fr) minmax(0,1fr);align-items:center;gap:24px;}
+ .prologue__art {max-height:calc(100dvh - 190px);}
+ .prologue__copy {padding:4px 5px 4px 0;}
+ .prologue__chapter {position:static;display:inline-block;max-width:none;min-height:0;margin-bottom:13px!important;padding:4px 10px;}
+ .prologue__heading {font-size:clamp(22px,2.1vw,28px);line-height:1.5;}
+ .prologue__caption {margin-top:13px!important;font-size:16px;line-height:1.85;}
+ .prologue__dialogue {padding:9px 13px;max-width:70%;font-size:clamp(15px,1.4vw,18px);}
+}
+@media (prefers-reduced-motion:reduce) {.prologue *, .prologue *::before,.prologue *::after {animation:none!important;transition:none!important;}.prologue__next:active,.prologue__next:hover{transform:none;}}

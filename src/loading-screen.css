@@ -1,0 +1,168 @@
+/* A little paper train: quiet scenery, turning wheels and a continuous passing track. */
+#boot-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: auto;
+  isolation: isolate;
+  color: #6b583d;
+  background-color: #fff8e9;
+  background-image: radial-gradient(ellipse at 50% 40%, #fffaf100 40%, #dcc79d18), radial-gradient(#a5895914 .65px, transparent .85px), radial-gradient(#fffdf685 .7px, transparent .9px);
+  background-size: 100% 100%, 4px 5px, 7px 6px;
+  background-position: center, 0 0, 2px 3px;
+  font-family: var(--font-hand, 'Kaiti SC'), STKaiti, KaiTi, 'PingFang SC', serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  transition: opacity 220ms var(--ease-out, cubic-bezier(.23, 1, .32, 1));
+}
+#boot-loader, #boot-loader * { box-sizing: border-box; }
+#boot-loader.is-leaving { opacity: 0; pointer-events: none; }
+#boot-loader[hidden], #boot-loader [hidden] { display: none !important; }
+.boot-loader__topline {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+  padding: max(23px, env(safe-area-inset-top)) 40px 0;
+}
+.boot-loader__postmark { display: inline-flex; align-items: center; gap: 9px; color: #806442; font-size: 16px; font-weight: 600; letter-spacing: .09em; }
+.boot-loader__postmark > svg { width: 39px; height: 39px; transform: rotate(-9deg); }
+.boot-loader__postmark small { display: block; margin-top: 2px; color: #a08b68; font-size: 10px; line-height: 1.4; font-weight: 400; letter-spacing: .04em; }
+.boot-loader__edition { position: relative; min-width: 94px; padding: 5px 15px 6px; border: 2px solid #bb9871; border-radius: 8px 10px 7px 11px; color: #ad7a5d; background: #fbefd5; font-size: 13px; line-height: 1.3; font-weight: 700; letter-spacing: .13em; text-align: center; transform: rotate(6deg); }
+.boot-loader__edition::before { content: ''; position: absolute; inset: 3px; border: 1px dashed #cfb18b; border-radius: 5px 7px 4px 8px; }
+.boot-loader__edition small { display: block; margin-top: 2px; font-size: 9px; font-weight: 400; letter-spacing: .1em; }
+.boot-loader__content { position: relative; z-index: 1; display: flex; flex: 1 0 auto; flex-direction: column; align-items: center; justify-content: center; width: 100%; max-width: 760px; margin: 0 auto; padding: 13px 24px 18px; text-align: center; }
+#boot-title { position: relative; z-index: 1; flex: 0 0 auto; margin: 0; font-family: var(--font-display, 'Kaiti SC'), STKaiti, KaiTi, 'PingFang SC', serif; font-synthesis: weight; font-weight: 800; text-wrap: balance; }
+.boot-loader__title-lead { display: block; color: #725c3e; font-size: 26px; line-height: 1.35; letter-spacing: .06em; }
+.boot-loader__wordmark { position: relative; display: inline-flex; align-items: baseline; isolation: isolate; margin-top: 5px; font-size: clamp(59px, 5.4vw, 78px); line-height: 1.15; letter-spacing: .02em; white-space: nowrap; }
+.boot-loader__wordmark::after { content: ''; position: absolute; left: 0; right: 1%; bottom: 2px; z-index: -1; height: 13px; border-radius: 65% 40% 48% 53%; background: #edce7a; box-shadow: 0 4px 0 -2px #e5be68; transform: rotate(-.9deg); }
+.boot-loader__wordmark i { --pencil: #73934e; position: relative; display: block; color: var(--pencil); font-style: normal; font-weight: 900; transform: rotate(-4deg); }
+.boot-loader__wordmark i:nth-child(2) { --pencil: #548fa0; transform: translateY(2px) rotate(3deg); }
+.boot-loader__wordmark i:nth-child(3) { --pencil: #c88063; transform: rotate(-2deg); }
+.boot-loader__wordmark i:nth-child(4) { --pencil: #8a83af; transform: translateY(1px) rotate(3deg); }
+.boot-loader__wordmark i:nth-child(5) { --pencil: #ab7895; margin-left: -.12em; transform: rotate(-5deg); }
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .boot-loader__wordmark i { background-color: var(--pencil); background-image: radial-gradient(#fff7dfab .65px, transparent 1px), repeating-linear-gradient(105deg, transparent 0 4px, #fff8e833 4px 4.8px, transparent 4.8px 7px); background-size: 4px 4.7px, 100% 100%; background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-stroke: .6px var(--pencil); }
+}
+.boot-loader__title-flower { position: absolute; top: 0; right: -28px; width: 31px; height: 31px; transform: rotate(12deg); }
+.boot-loader__illustration { position: relative; flex: 0 0 auto; width: min(100%, 600px); aspect-ratio: 15 / 7; margin: 15px 0 18px; overflow: hidden; }
+.boot-loader__scene { position: absolute; inset: 0; display: block; width: 100%; height: 100%; margin: 0; overflow: hidden; }
+#boot-caption { flex: 0 0 auto; min-height: 24px; max-width: 100%; margin: 0; color: #8c7050; font-size: 15px; line-height: 1.6; font-weight: 600; letter-spacing: .04em; text-wrap: balance; }
+.boot-loader__progress-wrap { flex: 0 0 auto; width: min(100%, 360px); margin-top: 15px; }
+.boot-loader__progress-label { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 7px; color: #78834d; font-size: 14px; line-height: 1.4; font-weight: 600; letter-spacing: .04em; }
+.boot-loader__progress-label > span:first-child { display: inline-flex; align-items: center; gap: 8px; }
+.boot-loader__progress-label svg { width: 23px; height: 23px; transform: rotate(-7deg); }
+#boot-percent { min-width: 4ch; color: #738646; font: 700 23px/1.2 var(--font-display, 'Kaiti SC'), STKaiti, KaiTi, 'PingFang SC', serif; font-variant-numeric: tabular-nums; text-align: right; letter-spacing: .01em; }
+#boot-progress { position: relative; height: 22px; padding: 3px; overflow: hidden; border: 2px solid #a7b783; border-radius: 16px 20px 17px 15px / 15px 15px 19px 19px; background: #fff9e6; box-shadow: 0 3px 0 #c5c99d55, inset 0 1px 2px #a1a36618; }
+#boot-fill { position: relative; display: block; width: 100%; height: 100%; border-radius: 10px 12px 13px 9px; background-color: #a4bc72; background-image: radial-gradient(#fff9d957 .6px, transparent 1px), linear-gradient(95deg, #89a768 4%, #b6c976 44%, #e5c67b 74%, #dca17b 100%); background-size: 4px 4px, 100% 100%; transform-origin: left center; transition: transform 120ms linear; }
+#boot-fill::after { content: ''; position: absolute; left: 7px; right: 7px; top: 2px; height: 2px; background: #fffce24d; border-radius: 50%; }
+.boot-loader__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.boot-loader__actions button { min-width: 116px; min-height: 44px; margin-top: 16px; padding: 9px 22px; border: 1.5px solid #a2b078; border-radius: 16px 20px 15px 17px; color: #617447; background: #e8edcd; box-shadow: 0 3px 0 #b6bf9070; font: 600 15px/1.5 var(--font-hand, 'Kaiti SC'), STKaiti, KaiTi, 'PingFang SC', serif; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; transition: transform 140ms var(--ease-out, cubic-bezier(.23, 1, .32, 1)), background-color 140ms ease; }
+.boot-loader__actions button:active { transform: scale(.97); }
+.boot-loader__actions button:focus-visible { outline: 3px solid #a98d60; outline-offset: 4px; }
+#boot-continue { color: #947450; border-color: #cfb281; background: #f6e5ba; }
+.boot-loader__footnote { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; gap: 12px; margin: 0; padding: 0 20px max(22px, env(safe-area-inset-bottom)); color: #a38c66; font-size: 12px; line-height: 1.5; letter-spacing: .05em; }
+.boot-loader__footnote span { width: 25px; height: 3px; border-bottom: 1px solid #c5b181; border-radius: 50%; transform: rotate(-4deg); }
+.boot-loader__sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+/* Wheel wrappers hold each axle in place; only the centered inner group rotates. */
+.boot-loader__wheel { transform-box: fill-box; transform-origin: 50% 50%; animation: boot-wheel-turn 2800ms linear infinite; }
+.boot-loader__wheel--small { animation-duration: 1900ms; }
+.boot-loader__wheel--front { animation-duration: 2500ms; }
+.boot-loader__engine { animation: boot-car-bob 1100ms var(--ease-in-out, cubic-bezier(.77, 0, .175, 1)) infinite; }
+.boot-loader__carriage { animation: boot-car-bob 1100ms -550ms var(--ease-in-out, cubic-bezier(.77, 0, .175, 1)) infinite; }
+/* The track repeats every 36px, the sparse roadside every 300px: both pass at 40px/s. */
+.boot-loader__sleepers { animation: boot-track-pass 900ms linear infinite; }
+.boot-loader__roadside { animation: boot-roadside-pass 7500ms linear infinite; }
+.boot-loader__cloud { animation: boot-cloud-drift 7800ms var(--ease-in-out, cubic-bezier(.77, 0, .175, 1)) infinite alternate; }
+.boot-loader__cloud--two { animation-duration: 9600ms; animation-delay: -4300ms; }
+.boot-loader__puff { opacity: 0; transform-box: fill-box; transform-origin: center; animation: boot-steam-drift 2700ms linear infinite; }
+.boot-loader__puff--two { animation-delay: -900ms; }
+.boot-loader__puff--three { animation-delay: -1800ms; }
+#boot-loader.is-error .boot-loader__scene *, #boot-loader[hidden] .boot-loader__scene * { animation-play-state: paused; }
+@keyframes boot-wheel-turn { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes boot-car-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2.5px); } }
+@keyframes boot-track-pass { from { transform: translateX(0); } to { transform: translateX(-36px); } }
+@keyframes boot-roadside-pass { from { transform: translateX(0); } to { transform: translateX(-300px); } }
+@keyframes boot-cloud-drift { from { transform: translateX(0); } to { transform: translateX(-8px); } }
+@keyframes boot-steam-drift { 0% { transform: translate(0, 0) scale(.85); opacity: 0; } 18% { opacity: .55; } 65% { opacity: .28; } 100% { transform: translate(-38px, -31px) scale(1.5); opacity: 0; } }
+@media (hover: hover) and (pointer: fine) { .boot-loader__actions button:hover { background-color: #dfe7bc; } #boot-continue:hover { background-color: #f3dda7; } }
+@media (max-width: 600px) {
+  .boot-loader__topline { padding: max(20px, env(safe-area-inset-top)) 24px 0; }
+  .boot-loader__postmark { gap: 7px; font-size: 14px; }
+  .boot-loader__postmark > svg { width: 34px; height: 34px; }
+  .boot-loader__postmark small { font-size: 9px; }
+  .boot-loader__edition { min-width: 84px; padding: 5px 10px; font-size: 12px; }
+  .boot-loader__edition small { font-size: 8px; }
+  .boot-loader__content { padding: 22px 24px 24px; }
+  .boot-loader__title-lead { font-size: clamp(18px, 5.2vw, 23px); line-height: 1.4; letter-spacing: .025em; }
+  .boot-loader__wordmark { margin-top: 6px; font-size: clamp(51px, 16vw, 72px); line-height: 1.2; letter-spacing: 0; }
+  .boot-loader__wordmark::after { bottom: 6px; height: 10px; }
+  .boot-loader__title-flower { right: -14px; top: -5px; width: 24px; height: 24px; }
+  .boot-loader__illustration { width: calc(100% + 44px); height: 240px; aspect-ratio: auto; max-width: none; margin: 18px -22px 13px; }
+  .boot-loader__scene { left: 50%; width: 520px; max-width: none; transform: translateX(-50%); }
+  #boot-caption { max-width: 310px; font-size: 14px; line-height: 1.6; }
+  .boot-loader__progress-wrap { width: min(100%, 300px); margin-top: 22px; }
+  .boot-loader__progress-label { font-size: 13px; }
+  #boot-percent { font-size: 23px; }
+  #boot-progress { height: 21px; }
+  .boot-loader__footnote { padding-bottom: max(23px, env(safe-area-inset-bottom)); font-size: 11px; }
+}
+@media (min-width: 601px) and (max-height: 800px) {
+  .boot-loader__topline { padding-top: max(10px, env(safe-area-inset-top)); }
+  .boot-loader__postmark > svg { width: 28px; height: 28px; }
+  .boot-loader__postmark { font-size: 13px; }
+  .boot-loader__postmark small { display: none; }
+  .boot-loader__edition { padding: 3px 12px; font-size: 11px; }
+  .boot-loader__edition small { font-size: 8px; }
+  .boot-loader__content { padding: 0 24px 6px; }
+  .boot-loader__title-lead { font-size: 20px; line-height: 1.3; }
+  .boot-loader__wordmark { margin-top: 4px; font-size: 54px; line-height: 1.12; }
+  .boot-loader__wordmark::after { height: 9px; }
+  .boot-loader__title-flower { width: 25px; height: 25px; right: -25px; }
+  .boot-loader__illustration { width: min(100%, 600px); margin-top: 17px; margin-bottom: 16px; }
+  #boot-caption { min-height: 19px; font-size: 12px; line-height: 1.6; }
+  .boot-loader__progress-wrap { margin-top: 6px; }
+  .boot-loader__progress-label { margin-bottom: 4px; font-size: 12px; }
+  .boot-loader__progress-label svg { width: 20px; height: 20px; }
+  #boot-percent { font-size: 20px; }
+  #boot-progress { height: 20px; }
+  .boot-loader__footnote { padding-bottom: max(10px, env(safe-area-inset-bottom)); font-size: 10px; line-height: 1.4; }
+}
+@media (max-width: 600px) and (max-height: 700px) {
+  .boot-loader__topline { padding: max(12px, env(safe-area-inset-top)) 19px 0; }
+  .boot-loader__postmark > svg { width: 29px; height: 29px; }
+  .boot-loader__postmark { font-size: 13px; }
+  .boot-loader__postmark small { font-size: 8px; }
+  .boot-loader__edition { padding: 3px 9px; font-size: 10px; }
+  .boot-loader__edition small { font-size: 8px; }
+  .boot-loader__content { padding: 9px 21px 12px; }
+  .boot-loader__title-lead { font-size: 18px; line-height: 1.3; }
+  .boot-loader__wordmark { margin-top: 4px; font-size: clamp(50px, 16vw, 60px); line-height: 1.12; }
+  .boot-loader__wordmark::after { height: 8px; bottom: 2px; }
+  .boot-loader__illustration { width: calc(100% + 36px); height: 205px; margin: 10px -18px 8px; }
+  .boot-loader__scene { width: 470px; }
+  #boot-caption { min-height: 21px; font-size: 12px; line-height: 1.7; }
+  .boot-loader__progress-wrap { margin-top: 12px; }
+  .boot-loader__progress-label { font-size: 12px; margin-bottom: 5px; }
+  .boot-loader__progress-label svg { width: 20px; height: 20px; }
+  #boot-percent { font-size: 21px; }
+  #boot-progress { height: 20px; }
+  .boot-loader__footnote { padding-bottom: max(13px, env(safe-area-inset-bottom)); font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .boot-loader__scene * { animation: none; }
+  .boot-loader__puff { opacity: 0; }
+  .boot-loader__puff:first-child { opacity: .35; transform: translate(-5px, -5px); }
+  #boot-fill { transition: none; }
+  .boot-loader__actions button { transition: background-color 140ms ease; }
+  .boot-loader__actions button:active { transform: none; }
+  #boot-loader { transition-duration: 140ms; }
+}

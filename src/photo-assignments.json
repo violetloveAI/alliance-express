@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "buildings": {
+    "school": [],
+    "canteen": [
+      "photo-14"
+    ],
+    "dorm": [
+      "photo-15",
+      "photo-16"
+    ],
+    "metro": [],
+    "walk": [
+      "photo-22",
+      "photo-23"
+    ],
+    "shenzhen": [
+      "photo-20"
+    ],
+    "hainan": [],
+    "guangdong": [],
+    "foshan": [
+      "photo-04",
+      "photo-12"
+    ],
+    "fuzhou": [
+      "photo-02",
+      "photo-03",
+      "photo-10"
+    ],
+    "zhangzhou": [
+      "photo-01",
+      "photo-08",
+      "photo-09"
+    ],
+    "reunion": [
+      "photo-05"
+    ],
+    "alliance": [],
+    "honor": [],
+    "supply": [],
+    "badminton": [],
+    "battlefield2042": [],
+    "dontstarve": [],
+    "terraria": [],
+    "battlefieldv": [],
+    "coding": [],
+    "picnic": [],
+    "classphoto": [
+      "photo-17",
+      "photo-21",
+      "photo-26"
+    ],
+    "jinggangshan": [
+      "photo-18",
+      "photo-24"
+    ],
+    "reunion2023": [
+      "photo-06"
+    ],
+    "museum": [
+      "photo-11",
+      "photo-25"
+    ],
+    "sanguosha": [],
+    "hearthstone": [],
+    "love": [],
+    "fitness": [
+      "photo-27"
+    ],
+    "pe": [],
+    "physics": [],
+    "guitar": []
+  },
+  "birthday": [
+    "photo-19"
+  ]
+}

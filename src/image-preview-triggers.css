@@ -1,0 +1,8 @@
+.image-preview-trigger {cursor:zoom-in;}
+.image-preview-trigger:focus-visible {outline:3px solid #a58a52;outline-offset:3px;}
+button.timeline-art {display:block;padding:0;border:0;text-align:initial;color:inherit;font:inherit;}
+button.timeline-art:active {transform:none;}
+.timeline-empty-preview {display:block;width:100%;padding:0;border:0;background:transparent;}
+.timeline-empty-preview:active {transform:none;}
+.memory-art.image-preview-trigger {outline-offset:-5px;}
+.photo-album__frame.image-preview-trigger {outline-offset:-4px;}

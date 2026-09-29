@@ -1,0 +1,184 @@
+/* Coordinates and facing belong to the outer SVG groups in scene.js.
+   All transform animation stays on their nested visual groups. */
+.train-body,
+.train-wheel,
+.train-steam,
+.train-departure,
+.train-dust,
+.arrival-ring,
+.tile-model-art,
+.discovery-halo,
+.discovery-spark,
+.discovery-badge {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.train-body { transform-origin: 50% 75%; }
+.train-wheel { opacity: 0; }
+
+.rider-train.moving .train-body,
+.rider-train.entering .train-body {
+  animation: train-travel-bob 180ms var(--ease-in-out) infinite alternate;
+}
+
+.rider-train.moving .train-wheel,
+.rider-train.entering .train-wheel {
+  opacity: .55;
+  animation: train-wheel-roll 280ms linear infinite;
+}
+
+.train-steam,
+.train-departure,
+.train-dust {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rider-train.moving .train-steam,
+.rider-train.entering .train-steam {
+  animation: train-travel-steam 360ms var(--ease-out) infinite;
+}
+
+.rider-train.moving .train-dust,
+.rider-train.entering .train-dust {
+  animation: train-travel-dust 280ms var(--ease-out) infinite;
+}
+
+.rider-train.moving .train-departure,
+.rider-train.entering .train-departure {
+  animation: train-departure-puff 260ms var(--ease-out) both;
+}
+
+.rider-train:is(.moving, .entering) .particle-1 { animation-delay: 80ms; }
+.rider-train:is(.moving, .entering) .particle-2 { animation-delay: 160ms; }
+
+.rider-train.settling .train-body {
+  animation: train-settle 220ms var(--ease-out) both;
+}
+
+.arrival-ring {
+  opacity: 0;
+  animation: train-arrival 260ms var(--ease-out) both;
+}
+
+/* This rare entry lets the island appear first and the train settle after it. */
+.exploration-map.arriving :is(.island-shore, .island-land, .tile-layer, .world-fog, .rail-layer, .model-layer) {
+  animation: island-arrival 500ms var(--ease-out) both;
+}
+
+.exploration-map.arriving .memory-label-layer {
+  animation: island-arrival 500ms 80ms var(--ease-out) both;
+}
+
+.rider-train.entering .train-entrance {
+  animation: train-enter-island 900ms var(--ease-out) both;
+}
+
+/* The discovery badge means newly in view; the existing lock remains in place
+   until the player actually visits that memory. */
+.tile-model.memory-discovered > .tile-model-art {
+  animation: memory-arrival 280ms var(--ease-out) both;
+}
+
+.discovery-halo,
+.discovery-spark,
+.discovery-badge { opacity: 0; }
+
+.tile-model.memory-discovered .discovery-halo {
+  animation: memory-halo 520ms var(--ease-out) both;
+}
+
+.tile-model.memory-discovered .discovery-spark {
+  animation: memory-spark 620ms var(--ease-out) both;
+}
+
+.tile-model.memory-discovered .discovery-badge {
+  animation: memory-new-badge 700ms var(--ease-out) both;
+}
+
+.discovery-badge-text {
+  fill: #8b6637;
+  font: 700 11px/1 system-ui, sans-serif;
+  letter-spacing: 1.4px;
+}
+
+@keyframes train-travel-bob {
+  from { transform: translateY(0); }
+  to { transform: translateY(-2px) rotate(-.2deg); }
+}
+
+@keyframes train-wheel-roll {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes train-travel-steam {
+  0% { opacity: 0; transform: translate(0, 0) scale(.95); }
+  18% { opacity: .6; }
+  100% { opacity: 0; transform: translate(-17px, -24px) scale(1.6); }
+}
+
+@keyframes train-travel-dust {
+  0% { opacity: 0; transform: translate(0, 0) scale(.95); }
+  20% { opacity: .38; }
+  100% { opacity: 0; transform: translate(-18px, -4px) scale(1.5); }
+}
+
+@keyframes train-departure-puff {
+  0% { opacity: .6; transform: translate(0, 0) scale(.95); }
+  100% { opacity: 0; transform: translate(-24px, -19px) scale(1.9); }
+}
+
+@keyframes train-settle {
+  0% { transform: translateY(-2px) rotate(.3deg); }
+  45% { transform: translateY(1px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes train-arrival {
+  0% { opacity: .65; transform: scale(.95); }
+  100% { opacity: 0; transform: scale(1.18); }
+}
+
+@keyframes island-arrival {
+  from { opacity: 0; }
+}
+
+@keyframes train-enter-island {
+  0% { opacity: 0; transform: translate(-120px, 8px); }
+  18% { opacity: 1; }
+  76% { opacity: 1; transform: translate(0, -2px); }
+  100% { opacity: 1; transform: translate(0, 0); }
+}
+
+@keyframes memory-arrival {
+  from { opacity: 0; transform: translateY(10px) scale(.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes memory-halo {
+  0% { opacity: .75; transform: scale(.95); }
+  100% { opacity: 0; transform: scale(1.22); }
+}
+
+@keyframes memory-spark {
+  0% { opacity: 0; transform: translateY(7px) scale(.95) rotate(-12deg); }
+  25% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-12px) scale(1.1) rotate(12deg); }
+}
+
+@keyframes memory-new-badge {
+  0% { opacity: 0; transform: translateY(6px) scale(.95); }
+  20%, 72% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-4px) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rider-train:is(.moving, .entering, .settling) :is(.train-body, .train-wheel, .train-steam, .train-departure, .train-dust, .train-entrance),
+  .exploration-map.arriving :is(.island-shore, .island-land, .tile-layer, .world-fog, .rail-layer, .model-layer, .memory-label-layer),
+  .arrival-ring,
+  .tile-model.memory-discovered :is(.tile-model-art, .discovery-halo, .discovery-spark, .discovery-badge) {
+    animation: none;
+  }
+  .rider-train:is(.moving, .entering) .train-wheel { opacity: 0; }
+}

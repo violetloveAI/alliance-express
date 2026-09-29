@@ -1,0 +1,37 @@
+.step-counter__value { position: relative; isolation: isolate; width: fit-content; }
+.step-counter > div.step-counter__value { margin-top: 14px; }
+.step-counter__value::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -17px -18px -14px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, #f48c795c 0%, #f6bd9b30 43%, transparent 72%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms var(--ease-out);
+}
+.step-counter .step-counter__unit { font: 13px var(--font-hand); color: #a89573; }
+.step-counter[data-milestone="true"] .step-counter__value::before { opacity: 1; }
+.step-counter #step-count { display: inline-block; transform-origin: 50% 85%; }
+.step-counter[data-milestone="true"] #step-count {
+  color: #d93645;
+  text-shadow: 0 2px 0 #fff5df, 0 0 16px #ee7e7040;
+  animation: milestone-hop 1600ms var(--ease-out) infinite;
+}
+/* Two short hops, then a pause: keep the number readable between celebrations. */
+@keyframes milestone-hop {
+  0%, 64%, 100% { transform: translateY(0) scale(1) rotate(0); }
+  10% { transform: translateY(1px) scale(1.08, .93) rotate(0); }
+  24% { transform: translateY(-8px) scale(1.14) rotate(-3deg); }
+  38% { transform: translateY(0) scale(1.08, .94) rotate(0); }
+  50% { transform: translateY(-4px) scale(1.07) rotate(2deg); }
+}
+@media (max-width: 620px) {
+  .step-counter .step-counter__value { flex-direction: column; align-items: flex-start; gap: 3px; }
+  .step-counter .step-counter__unit { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .step-counter__value::before { transition: none; }
+  .step-counter[data-milestone="true"] #step-count { animation: none; }
+}

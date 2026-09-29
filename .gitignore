@@ -1,0 +1,30 @@
+node_modules/
+dist/
+.DS_Store
+artifacts/
+
+# Original photo review copies stay on this computer.
+照片分类待确认/
+
+特殊建筑照片/
+
+# Local design rounds, exports and source-page captures are not part of the game.
+output/
+docs/
+public/creative-options/
+public/experience-options/
+public/sfx-round2/
+public/terrain-options/
+public/audio/sfx/evidence/
+public/audio/sfx/verification.json
+scripts/build-sfx-round2.mjs
+
+# Superseded opening illustration; the opening train is now inline SVG.
+public/assets/loading-secret-train-v2.webp
+
+# Keep local credentials and editor files out of publication.
+.env
+.env.*
+*.pem
+*.key
+*.log

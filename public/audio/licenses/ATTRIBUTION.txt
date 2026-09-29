@@ -1,0 +1,55 @@
+"Carefree" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+https://creativecommons.org/licenses/by/4.0/
+Source: https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400037
+
+Original audio unchanged. Filename changed; the application repeats this track with native single-track looping.
+Selected sound effects — second listening round
+
+Full file/source/license/hash manifest: ../sfx/manifest.json
+Full attribution and reuse information: ../sfx/ATTRIBUTION.txt
+
+01-04 — 16 button clicks — Clic07.mp3.flac — Independent.nu
+https://opengameart.org/content/16-button-clicks
+CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded audio unchanged.
+
+02-04 — gravel.ogg — TinyWorlds
+https://opengameart.org/content/different-steps-on-wood-stone-leaves-gravel-and-mud
+CC0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded audio unchanged.
+
+03-01 — bell2.wav — creeeeak
+https://freesound.org/people/creeeeak/sounds/531021/
+CC0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded audio unchanged.
+
+04-04 — Book Flip Sounds — BookFlip13.wav — Voltiment555
+https://opengameart.org/content/book-flip-sounds
+CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded audio unchanged.
+
+05-01 — Book Flip Sounds — BookFlip1.wav — Voltiment555
+https://opengameart.org/content/book-flip-sounds
+CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded audio unchanged.
+
+06-05 — mark_tree_high_up.wav — joedeshon
+https://freesound.org/people/joedeshon/sounds/78206/
+CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Freesound public HQ MP3 preview downloaded unchanged; playback selects 0–4 seconds. The complete downloaded file is retained.
+
+07-01 — open-cardboard-box-compartment.wav — newagesoup
+https://freesound.org/people/newagesoup/sounds/364740/
+CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded audio unchanged.
+
+08-05 — TaDa!.aif — jimhancock
+https://freesound.org/people/jimhancock/sounds/256128/
+CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded audio unchanged.
+
+09-05 — walt's bar chimes.mp3 — Dann
+https://freesound.org/people/Dann/sounds/540295/
+CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded audio unchanged.

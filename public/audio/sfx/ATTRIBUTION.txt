@@ -1,0 +1,91 @@
+Selected sound effects — 《同盟漫游记》
+
+Original downloaded files remain byte-for-byte unchanged. No AI generation, splicing, normalization or pitch change was performed. Freesound files marked HQ MP3 preview are platform-compressed public preview copies, not original lossless WAV/AIF files.
+
+Playback-only change: mark_tree_high_up.wav uses the selected 0–4 second listening range. The complete MP3 remains included. All other selected files play to natural completion unless replaced or muted.
+
+01-04 · ui-confirm · 16 button clicks — Clic07.mp3.flac
+Author: Independent.nu
+Source: https://opengameart.org/content/16-button-clicks
+License: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded file: https://opengameart.org/sites/default/files/independent_nu_ljudbank-buttons_and_clicks.7z
+Local file: ui-confirm.flac
+SHA-256: b44c05bdb39bb06ff9beefb56888a76e34aa195afbbc28df5afad89f7f46f6eb
+16 button clicks — Clic07.mp3.flac by Independent.nu — https://opengameart.org/content/16-button-clicks — CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Original downloaded audio unchanged.
+
+02-04 · move · gravel.ogg
+Author: TinyWorlds
+Source: https://opengameart.org/content/different-steps-on-wood-stone-leaves-gravel-and-mud
+License: CC0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded file: https://opengameart.org/sites/default/files/%5Bkdd%5DDifferentSteps_0.zip
+Local file: move.ogg
+SHA-256: 34e6057ec1581b5cb8802e4942952b00b1dac235bfcb0ed8cff0ceb15a3ebbbf
+gravel.ogg from Different steps on wood, stone, leaves, gravel and mud by TinyWorlds — https://opengameart.org/content/different-steps-on-wood-stone-leaves-gravel-and-mud — CC0 1.0. Based on pdsounds.org recordings; no local audio processing.
+
+03-01 · discovery · bell2.wav
+Author: creeeeak
+Source: https://freesound.org/people/creeeeak/sounds/531021/
+License: CC0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded file: https://cdn.freesound.org/previews/531/531021_3160531-hq.mp3
+Local file: discovery.mp3
+SHA-256: f54fa30d327e76974df1271867fcf4efb7185d2f893bcb8ff3da561ab82607b4
+"bell2.wav" by creeeeak — https://freesound.org/people/creeeeak/sounds/531021/ — CC0; https://creativecommons.org/publicdomain/zero/1.0/
+
+04-04 · memory-open · Book Flip Sounds — BookFlip13.wav
+Author: Voltiment555
+Source: https://opengameart.org/content/book-flip-sounds
+License: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded file: https://opengameart.org/sites/default/files/BookFlip_SFX.zip
+Local file: memory-open.wav
+SHA-256: 3ee7769b3c69b36eb7ab6ea4cc749ac50c26218fefddddaaae8786cf974c34eb
+Book Flip Sounds — BookFlip13.wav by Voltiment555 — https://opengameart.org/content/book-flip-sounds — CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Original downloaded audio unchanged.
+
+05-01 · page-turn · Book Flip Sounds — BookFlip1.wav
+Author: Voltiment555
+Source: https://opengameart.org/content/book-flip-sounds
+License: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded file: https://opengameart.org/sites/default/files/BookFlip_SFX.zip
+Local file: page-turn.wav
+SHA-256: 16e2bcf51fde1fc1ee495830c67ea30639ce31b6fe1fb39e5d76c50a55bad73c
+Book Flip Sounds — BookFlip1.wav by Voltiment555 — https://opengameart.org/content/book-flip-sounds — CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Original downloaded audio unchanged.
+
+06-05 · gift-ready · mark_tree_high_up.wav
+Author: joedeshon
+Source: https://freesound.org/people/joedeshon/sounds/78206/
+License: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Downloaded file: https://cdn.freesound.org/previews/78/78206_1218676-hq.mp3
+Local file: gift-ready.mp3
+SHA-256: d0ed796588bb3715293e34ffbe06f6b9c91655b432dd5cc243d681eaeffc9e28
+"mark_tree_high_up.wav" by joedeshon — https://freesound.org/people/joedeshon/sounds/78206/ — CC BY 4.0, https://creativecommons.org/licenses/by/4.0/. Freesound HQ MP3 preview downloaded unchanged.
+
+07-01 · gift-open · open-cardboard-box-compartment.wav
+Author: newagesoup
+Source: https://freesound.org/people/newagesoup/sounds/364740/
+License: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded file: https://cdn.freesound.org/previews/364/364740_4067257-hq.mp3
+Local file: gift-open.mp3
+SHA-256: f7ee56b36e21a80a3420db8c11330b86c0cf0b350d5f94ec0e1e85d15920b201
+open-cardboard-box-compartment.wav — newagesoup, Freesound, CC0 1.0. Source: https://freesound.org/people/newagesoup/sounds/364740/ License: https://creativecommons.org/publicdomain/zero/1.0/ Public HQ MP3 preview, downloaded unchanged.
+
+08-05 · birthday · TaDa!.aif
+Author: jimhancock
+Source: https://freesound.org/people/jimhancock/sounds/256128/
+License: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded file: https://cdn.freesound.org/previews/256/256128_375016-hq.mp3
+Local file: birthday.mp3
+SHA-256: b38674303fb5c6ec0d714b02b95b3a1a227ef886822636cc38cc5099eae14aa2
+TaDa!.aif — jimhancock, Freesound, CC0 1.0. Source: https://freesound.org/people/jimhancock/sounds/256128/ License: https://creativecommons.org/publicdomain/zero/1.0/ Public HQ MP3 preview, downloaded unchanged.
+
+09-05 · world-reveal · walt's bar chimes.mp3
+Author: Dann
+Source: https://freesound.org/people/Dann/sounds/540295/
+License: CC0 1.0 — https://creativecommons.org/publicdomain/zero/1.0/
+Downloaded file: https://cdn.freesound.org/previews/540/540295_1432-hq.mp3
+Local file: world-reveal.mp3
+SHA-256: 3eb1692c45d9f51d776c928f53be44c2098c10ab768d085e843c3559792f83ec
+walt's bar chimes.mp3 — Dann, Freesound, CC0 1.0. Source: https://freesound.org/people/Dann/sounds/540295/ License: https://creativecommons.org/publicdomain/zero/1.0/ Public HQ MP3 preview, downloaded unchanged.
+
+Background music: “Carefree” — Kevin MacLeod (incompetech.com)
+https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1400037
+CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+Original recording unchanged; native single-track looping. Existing license: ../licenses/ATTRIBUTION.txt
